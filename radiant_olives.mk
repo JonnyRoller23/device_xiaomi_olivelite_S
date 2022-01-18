@@ -15,6 +15,8 @@ $(call inherit-product, vendor/radiant/config/common_full_phone.mk)
 # Inherit from olives device
 $(call inherit-product, device/xiaomi/olives/device.mk)
 
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := olives
 PRODUCT_NAME := radiant_olives
