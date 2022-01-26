@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The CrDroid
+# Copyright (C) 2021 The NusantaraProject
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -9,15 +9,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common CrDroid stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common NusantaraProject stuff.
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
 # Inherit from olives device
 $(call inherit-product, device/xiaomi/olives/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := olives
-PRODUCT_NAME := lineage_olives
+PRODUCT_NAME := nad_olives
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 8A
@@ -32,6 +32,10 @@ TARGET_USES_AOSP_CHARGER := false
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_INCLUDE_STOCK_ARCORE := false
+NAD_BUILD_TYPE := UNOFFICIAL
+USE_GAPPS := false
+USE_AOSP_CLOCK := true
+USE_LAWNCHAIR := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
